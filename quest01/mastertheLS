@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ls -lApt --time=access --format=single-column | grep -vE '/(\.|..)$' | tr '\n' ',' | sed 's/,$//'
